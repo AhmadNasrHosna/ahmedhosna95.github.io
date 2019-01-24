@@ -1,5 +1,5 @@
 :root {
-	--turkey: #FFF0EB;
+	--turkey: #E1E1E1;
 	--white: white;
 	--blue: blue;
 }
@@ -41,7 +41,7 @@ a[href]:not(:hover) {
 	text-decoration: none;
 }
 
-header,
+.site-header,
 main,
 footer {
 	padding: 1em;
