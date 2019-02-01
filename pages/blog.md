@@ -1,9 +1,9 @@
 ---
 layout: layouts/blog.njk
-title: Blog
+title: Articles | Ahmed N. Hosna
 tags:
   - nav
-navtitle: Blog
+navtitle: technical blog
 date: 2017-01-01
-permalink: /blog/index.html
+permalink: /posts/index.html
 ---

@@ -2,8 +2,29 @@ const { DateTime } = require("luxon");
 const CleanCSS = require("clean-css");
 const UglifyJS = require("uglify-es");
 const htmlmin = require("html-minifier");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const Figure = require("./_includes/components/Figure.js");
+const Youtube = require("./_includes/components/Youtube.js");
+const markdown = require('markdown-it')({
+  html: true,
+  breaks: true,
+  linkify: true,
+  typographer: true,
+}).use(require('markdown-it-anchor'), {
+  level: [2],
+  permalink: false,
+});
 
 module.exports = function(eleventyConfig) {
+
+  eleventyConfig.setLibrary('md', markdown);
+  eleventyConfig.addFilter('markdownify', str => markdown.render(str))
+
+  eleventyConfig.addFilter('markdownify_inline', str =>
+    markdown.renderInline(str),
+  )
+
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
 
   // Date formatting (human readable)
@@ -44,6 +65,28 @@ module.exports = function(eleventyConfig) {
     return content;
   });
 
+  // ----
+
+  // Plugins
+  eleventyConfig.addPlugin(pluginRss);
+
+  eleventyConfig.addPlugin(syntaxHighlight);
+
+  eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
+
+  // Get the first `n` elements of a collection.
+  eleventyConfig.addFilter("head", (array, n) => {
+    if (n < 0) {
+      return array.slice(n);
+    }
+
+    return array.slice(0, n);
+  });
+
+  // Shortcodes
+  eleventyConfig.addShortcode("Figure", Figure);
+  eleventyConfig.addShortcode("Youtube", Youtube);
+
   // only content in the `posts/` directory
   eleventyConfig.addCollection("posts", function(collection) {
     return collection.getAllSorted().filter(function(item) {
@@ -56,19 +99,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("_includes/assets/");
 
-  /* Markdown Plugins */
-  let markdownIt = require("markdown-it");
-  let options = {
-    html: true,
-    breaks: true,
-    linkify: true
-  };
-  let opts = {
-    permalink: true,
-    permalinkClass: "direct-link",
-    permalinkSymbol: "#"
-  };
-
   return {
     templateFormats: ["md", "njk", "html"],
 
@@ -78,7 +108,7 @@ module.exports = function(eleventyConfig) {
     // This is only used for URLs (it does not affect your file structure)
     pathPrefix: "/",
 
-    markdownTemplateEngine: "liquid",
+    markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk",
     passthroughFileCopy: true,
@@ -90,4 +120,3 @@ module.exports = function(eleventyConfig) {
     }
   };
 };
-

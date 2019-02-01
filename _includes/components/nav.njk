@@ -1,9 +1,47 @@
 <nav class="site-header__navbar">
+
+  <ul class="menu-on-right">
+    {%- for nav in collections.nav | sort(attribute="date") -%}
+
+      {% if nav.data.navtitle == 'about' %}
+        <li>
+          <a href="{{ nav.url | url }}" {% if nav.url == page.url %} data-current="current item" {% endif %}>{{ nav.data.navtitle }}</a>
+        </li>
+      {% endif %}
+
+      {% if nav.data.navtitle == 'contact' %}
+        <li>
+          <a href="{{ nav.url | url }}" {% if nav.url == page.url %} data-current="current item" {% endif %}>{{ nav.data.navtitle }}</a>
+        </li>
+      {% endif %}
+
+    {%- endfor -%}
+  </ul>
+
+  <ul class="menu-on-left">
+    {%- for nav in collections.nav | sort(attribute="date") -%}
+      {% if nav.data.navtitle != 'Home' %}
+        {% if nav.data.navtitle != 'contact' %}
+          {% if nav.data.navtitle != 'about' %}
+
+            <li>
+              <a href="{{ nav.url | url }}" {% if nav.url == page.url %} data-current="current item" {% endif %}>{{ nav.data.navtitle }}</a>
+            </li>
+
+          {% endif %}
+        {% endif %}
+      {% endif %}
+    {%- endfor -%}
+  </ul>
+</nav>
+
+{# <nav class="site-header__navbar">
   <ul>
   {%- for nav in collections.nav | sort(attribute="date") -%}
-    <li>
-      <a href="{{ nav.url | url }}"{% if nav.url == page.url %} data-current="current item"{% endif %}>{{ nav.data.navtitle }}</a>
+    <li class="{{ nav.data.navtitle }}">
+      <a  href="{{ nav.url | url }}"{% if nav.url == page.url %} data-current="current item"{% endif %}>{{ nav.data.navtitle }}</a>
     </li>
   {%- endfor -%}
   </ul>
 </nav>
+ #}

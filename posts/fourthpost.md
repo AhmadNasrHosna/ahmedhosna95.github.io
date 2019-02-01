@@ -1,10 +1,53 @@
 ---
 title: This is my fourth post
-summary: Why contemplating our mortality can be a powerful catalyst for change
-date: 2017-02-03
+date: 2019-1-25T10:37:10
 tags:
   - post
   - environment
   - politics
 ---
-Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+
+{% Youtube "Uwnmn65cMec" %}
+
+Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. 
+
+![اسم الصورة](https://a3ammar.github.io/arabic-jekyll/images/jekyll-logo.png "وصف الصورة")
+
+
+1. Leverage agile frameworks
+2. Provide a robust synopsis
+3. Collaborative thinking
+
+## 3 Important things about CSS
+
+Leverage agile [frameworks](#) to provide a robust synopsis for high level overviews. **Iterative** approaches to corporate strategy foster collaborative thinking to further the overall value proposition.Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to _corporate_ strategy foster collaborative thinking to further the overall value proposition. Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. 
+
+***
+
+> Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.
+
+``` css/1,2
+.site-footer span {
+  font-size: 15px;
+  padding: 1em 0 1.4em;
+  background: radial-gradient(rgba(131, 164, 223, 0.5), transparent), transparent;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.site-footer span a {
+  color: gold !important;
+  margin: .2rem;
+  border: 1px solid gold;
+  border-radius: 2px;
+  padding: .08em .6em .08em;
+  transition: background .1s ease;
+  box-shadow: 1px 1px gold;
+  text-align: center;
+  font-size: 12px;
+  position: relative;
+  top: -1px;
+  font-weight: 700;
+  font-style: normal;
+}
+```

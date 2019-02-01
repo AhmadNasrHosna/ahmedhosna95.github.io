@@ -5,12 +5,7 @@
 
   <body>
 
-    <header class="site-header">
-      <h1 class="site-header__site-title">
-        <a href="{{ '/' | url }}">{{ metadata.title }}</a>
-      </h1>
-      {% include "components/nav.njk" %}
-    </header>
+    {% include "components/header.njk" %}
 
     <div class="site-content">
       <main class="site-content__content-wrapper">

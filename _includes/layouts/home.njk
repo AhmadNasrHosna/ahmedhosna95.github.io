@@ -3,4 +3,22 @@ layout: layouts/base.njk
 section: home
 ---
 
-{{ layoutContent | safe }}
+<div class="homepage-content">
+  <section class="page-section">
+    {{ layoutContent | safe }}
+  </section>
+
+  <section class="page-section">
+    <div class="latest-articles">
+      <h3>My Latest Articles</h3>
+      <p>My ramblings in design and front-end development.</p>
+
+      {% set postslist = collections.posts | head(-5) %}
+      {% include "components/postslist.njk" %}
+
+      <p>More posts can be found in <a class="btn btn--green" href="{{ '/blog/' | url }}">the archive</a>
+      </p>
+    </div>
+  </section>
+  
+</div>

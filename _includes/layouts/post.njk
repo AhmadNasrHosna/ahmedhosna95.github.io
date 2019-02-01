@@ -6,10 +6,10 @@ section: post
 <article class="post">
 
   <header class="post__header">
-    <h1 class="post__title">{{ title }}</h1>
     <div class="post__meta">
       <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time>
     </div>
+    <h2 class="post__title">{{ title }}</h2>
 
     {% if tags %}
       <div class="post__tags">
@@ -28,18 +28,18 @@ section: post
   </section>
 
   <footer class="post__footer">
-    <div class="post__author">
-      <div class="post__author__avatar">
-        <img width="64" src="/static/img/logo.png"/>
+    <div class="post-author">
+      <div class="post-author__avatar">
+        <img width="64" src="/static/img/avatar.jpeg"/>
       </div>
-      <div class="author__info">
+      <div class="post-author__info">
         <span class="h4">Written by</span>
-        <h3 class="post__author__name">{{ metadata.author.name }}</h3>
+        <h3 class="post-author__name">{{ metadata.author.name }}</h3>
       </div>
     </div>
   </footer>
 </article>
 
-<nav>
-  <a href="{{ '/blog/' | url }}">← Blog index</a>
+<nav class="secondary-navbar">
+  <a href="{{ '/posts/' | url }}">← Blog index</a>
 </nav>

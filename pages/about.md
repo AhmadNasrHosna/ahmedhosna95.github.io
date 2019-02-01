@@ -1,27 +1,36 @@
 ---
-title: About us
+title: About
 tags:
   - nav
-navtitle: About
+navtitle: about
 section: about
 date: 2017-01-01
+updated: 2018-11-29T09:39:29
 permalink: /about/index.html
 ---
 
-Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+I'am Ahmed Nasr, a front-end web developer from Egypt, I make things for web.
 
-## Our services
+I'am working on being a special one of those who write code and design for web. that makes me happier than anything else, and grateful to my existence. My passion is in building a clean & modern code.
 
-Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+With the public I share some of my works, make sure to stop and look around! 
 
-### Blue-sky thinking
+Check out my portfolio, my github, my dribbble, my codepen
 
-Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
 
-#### Management frameworks
 
-Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+#### I can help you in:
+- Front-end Web Development >>
+- Implement design files into a semantic, standard and interactive web pages.
+- Responsive Web Design.
+- Fixing & debugging CSS issues.
+- Build websites with clean code & modern echnologies.
+- Web Performance.
+- Progressive Enhancement.
+- CSS & HTML & JS Architecture, [Modular Design].
 
-##### Regulatory convergence
+#### I can't help you in:
+- Back-end stuff.
 
-Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+
+[LET'S WORK TOGETHER!](/contact)

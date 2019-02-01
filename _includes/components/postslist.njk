@@ -1,6 +1,8 @@
-<section>
+<section class="articles" style="counter-reset: start-from {{ postslist.length + 1 }}">
+  
   {% for post in postslist | reverse %}
     <article class="entry" {% if post.url == url %} data-current="current item" {% endif %}>
+      
       <h3 class="entry__title">
         <a href="{{ post.url | url }}">
           {% if post.data.title %}
@@ -32,4 +34,5 @@
       
     </article>
   {% endfor %}
+
 </section>
