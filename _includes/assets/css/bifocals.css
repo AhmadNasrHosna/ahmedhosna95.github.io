@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Bifocals';
+    src: url('../fonts/bifocals/Bifocals-Regular.eot');
+    src: url('../fonts/bifocals/Bifocals-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/bifocals/Bifocals-Regular.woff2') format('woff2'),
+        url('../fonts/bifocals/Bifocals-Regular.woff') format('woff'),
+        url('../fonts/bifocals/Bifocals-Regular.ttf') format('truetype'),
+        url('../fonts/bifocals/Bifocals-Regular.svg#Bifocals-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bifocals';
+    src: url('../fonts/bifocals/Bifocals-Italic.eot');
+    src: url('../fonts/bifocals/Bifocals-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/bifocals/Bifocals-Italic.woff2') format('woff2'),
+        url('../fonts/bifocals/Bifocals-Italic.woff') format('woff'),
+        url('../fonts/bifocals/Bifocals-Italic.ttf') format('truetype'),
+        url('../fonts/bifocals/Bifocals-Italic.svg#Bifocals-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Bifocals';
+    src: url('../fonts/bifocals/Bifocals-BlackItalic.eot');
+    src: url('../fonts/bifocals/Bifocals-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/bifocals/Bifocals-BlackItalic.woff2') format('woff2'),
+        url('../fonts/bifocals/Bifocals-BlackItalic.woff') format('woff'),
+        url('../fonts/bifocals/Bifocals-BlackItalic.ttf') format('truetype'),
+        url('../fonts/bifocals/Bifocals-BlackItalic.svg#Bifocals-BlackItalic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Bifocals';
+    src: url('../fonts/bifocals/Bifocals-Black.eot');
+    src: url('../fonts/bifocals/Bifocals-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/bifocals/Bifocals-Black.woff2') format('woff2'),
+        url('../fonts/bifocals/Bifocals-Black.woff') format('woff'),
+        url('../fonts/bifocals/Bifocals-Black.ttf') format('truetype'),
+        url('../fonts/bifocals/Bifocals-Black.svg#Bifocals-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+

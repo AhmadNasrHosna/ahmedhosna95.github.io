@@ -329,10 +329,12 @@ button:focus {
 
 .site-footer span {
   font-size: 15px;
-  padding: 1em 0 1.4em;
+  padding: 1em 0;
   background: radial-gradient(rgba(131, 164, 223, 0.5), transparent), transparent;
   font-weight: 300;
   font-style: italic;
+  display: inline-block;
+  letter-spacing: .02em;
 }
 
 .site-footer span a {
@@ -340,7 +342,7 @@ button:focus {
   margin: .2rem;
   border: 1px solid gold;
   border-radius: 2px;
-  padding: .08em .6em .08em;
+  padding: .04em .6em .08em;
   transition: background .1s ease;
   box-shadow: 1px 1px gold;
   text-align: center;
@@ -459,12 +461,15 @@ button:focus {
   padding: .8em 1em;
   border-radius: 0 2px 2px 0;
   box-shadow: 4px 4px 0 hsla(0, 0%, 0%, .13);
-  align-items: center;
   counter-increment: start-from -1;
   position: relative;
   border: 2px solid #444;
   margin-left: 40px;
   border-left: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .entry:before {
@@ -499,22 +504,21 @@ button:focus {
 }
 
 .entry .entry__meta {
-  flex-grow: 1;
+  margin-top: .2rem;
+
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  position: relative;
-  margin-top: .2rem;
+  align-items: flex-end;
+  order: 1;
 }
 
 .entry .entry__date {
   text-transform: uppercase;
   color: hsl(0, 0%, 80%);
-  position: absolute;
-  right: 0;
-  bottom: 0;
   font-family: var(--font-3);
   font-size: 19px;
+
+  order: 2;
 }
 
 .entry .entry__tags {
@@ -674,22 +678,38 @@ main {
   max-width: 1140px;
 }
 
+.page-section {
+  padding: 30px 0;
+}
+
 .latest-articles h3 {
   font-family: var(--font-5);
   color: gold;
+  font-size: 22px;
+  margin: 0;
 }
+
+.latest-articles > p {
+  font-style: italic;
+  font-size: 14px;
+  letter-spacing: .04em;
+  font-weight: 300;
+}
+
+.latest-articles > p:last-of-type { font-style: normal }
 
 .latest-articles .articles {
   grid-template-columns: repeat(5, 1fr);
-  margin-bottom: 1rem;
+  margin: 1.4rem 0 1rem;
 }
 
 .latest-articles .entry {
-  align-items: flex-start;
+  /* align-items: flex-start;
   display: flex;
   flex-direction: column;
-  height: 230px;
-  justify-content: space-between;
+  justify-content: space-between; */
+
+  max-height: 230px;
 }
 
 .latest-articles .entry__title {
@@ -702,7 +722,7 @@ main {
 .latest-articles .entry__meta {
   justify-content: unset;
   align-items: flex-start;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 
 .latest-articles .entry:before {
