@@ -4,19 +4,53 @@
   {% include "components/head.njk" %}
 
   <body>
+    <div class="grid-wrapper container">
+      {% include "components/header.njk" %}
 
-    {% include "components/header.njk" %}
+      <main class="site-content">
+        <div class="site-content__wrapper">
 
-    <div class="site-content">
-      <main class="site-content__content-wrapper">
+          {{ layoutContent | safe }}
 
-        {{ layoutContent | safe }}
-
+        </div>
       </main>
+
+      {% include "components/footer.njk" %}
     </div>
+    
+  <script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
+  <script>
 
-    {% include "components/footer.njk" %}
+    const postTitle = document.querySelector('.post__title');
+    const postTitleText = document.querySelector('.post__title span');
+    const postAuthor = document.querySelector('.post__footer .post-author');
 
+    const range = 100;
+
+    document.addEventListener('scroll', () => {     
+      const currentScroll = pageYOffset;
+      const backgroundMove = Math.round( ((currentScroll / 3) / (range * 11)) * 100  );
+
+      if (postTitle && postTitleText && postAuthor) {
+        const CompletelyFadePoint = postTitleText.getBoundingClientRect().top + pageYOffset + 40;
+        const opacityValue  = 1 - (currentScroll - CompletelyFadePoint + range) / range;
+
+        postTitleText.style.opacity = opacityValue;
+        postTitleText.style.transform = `translateY(${currentScroll / 3}px)` ;
+        postTitleText.style.transform = `translateY(${currentScroll / 3}px)` ;
+
+        if (opacityValue > '1') {
+          postTitleText.style.opacity = 1;
+        } else if ( opacityValue < '0' ) {
+          postTitleText.style.opacity = 0;
+        } 
+
+        postTitle.style.backgroundPosition = `0 -${backgroundMove}%` ;
+        postAuthor.style.backgroundPosition = `0 -${backgroundMove}%` ;
+      } 
+    });
+
+  </script>
   </body>
 
 </html>

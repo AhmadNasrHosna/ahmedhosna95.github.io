@@ -1,0 +1,19 @@
+blockquote {
+  /* - REST - */
+  margin: 0 0 auto 0;
+}
+
+blockquote {
+  background: linear-gradient(-45deg,hsla(304, 42%, 64%, 0) 0,hsla(164, 33%, 51%, .1) 100%);
+  border-left: 10px solid hsla(164, 33%, 51%, 0.84);
+  padding: 1em 1em 1.25em;
+  margin-bottom: 4rem;
+
+  p {
+    font-family: "Sorts Mill Goudy", serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #333;
+    line-height: 1.6;
+  }
+}

@@ -1,0 +1,26 @@
+.m-auto {
+  margin: auto;
+
+  &--inline { 
+    display: block;
+    margin-inline: auto;
+  }
+
+  &--block { 
+    display: block;
+    margin-block: auto;
+   }
+
+}
+
+.no-m-top    { margin-top: 0 }
+
+.no-m-bottom { margin-bottom: 0 }
+
+.no-m-left   { margin-left: 0 }
+
+.no-m-right  { margin-right: 0} 
+
+.no-m-inline { margin-inline: 0} 
+
+.no-m-block  { margin-block: 0} 

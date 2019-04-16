@@ -1,0 +1,14 @@
+.generic-hover {
+  
+  &--black {
+    transition: all 200ms ease;
+
+    &:hover {
+      background-color: #000;
+      color: #fff;
+      border-color: transparent;
+      box-shadow: 0 2px 7px rgba(0,0,0,.25);
+    }
+  }
+
+}

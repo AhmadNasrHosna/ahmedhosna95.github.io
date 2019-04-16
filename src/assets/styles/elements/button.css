@@ -1,0 +1,21 @@
+/***
+* pointer-events: none to elements within a button. This is 
+* mainly used for JavaScript interaction.
+*
+* (When users click on something in a button, event.target is the
+* thing they clicked on, not the button. This style makes it
+* easier to work with click events if there are HTML elements
+* inside a button)
+***/
+
+button {
+  border: 1px solid transparent; 
+  font: inherit; 
+  letter-spacing: inherit; 
+  cursor: pointer;  
+  
+  * {
+    pointer-events: none;
+  }
+}
+

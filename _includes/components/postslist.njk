@@ -5,11 +5,13 @@
       
       <h3 class="entry__title">
         <a href="{{ post.url | url }}">
+          <span>
           {% if post.data.title %}
             {{ post.data.title }}
           {% else %}
 						Untitled
 					{% endif %}
+          </span>
         </a>
       </h3>
 
@@ -24,7 +26,9 @@
           {% for tag in post.data.tags %}
             {%- if tag != "post" -%}
               {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-              <a href="{{ tagUrl | url }}" rel="tag">#{{ tag }}</a>
+              <a href="{{ tagUrl | url }}" rel="tag">
+                <span>#{{ tag }}</span>
+              </a>
             {%- endif -%}
           {% endfor %}
         </div>

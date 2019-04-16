@@ -1,0 +1,42 @@
+.align-center {
+  text-align: center;
+
+  &--atXSmall {
+    @mixin at xSmall {
+      text-align: center;
+    }
+  }
+
+  &--atSmall {
+    @mixin at Small {
+      text-align: center;
+    }
+  }
+
+  &--atMedium {
+    @mixin at Medium {
+      text-align: center;
+    }
+  }
+
+}
+
+.align-start {
+  text-align: start;
+
+  &--atMedium {
+    @mixin at Medium {
+      text-align: start;
+    }
+  }
+}
+
+.align-end {
+  text-align: end;
+
+  &--atMedium {
+    @mixin at Medium {
+      text-align: end;
+    }
+  }
+}

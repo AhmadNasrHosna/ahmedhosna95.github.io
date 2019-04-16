@@ -1,0 +1,9 @@
+p {
+  margin-top: 0;
+  line-height: 1.7;
+  word-break: break-word;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}

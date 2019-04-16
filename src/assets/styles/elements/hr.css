@@ -1,0 +1,13 @@
+/* hr {
+  border: 0;
+  width: 100%; height: 1px;
+  background: grey;
+  margin-bottom: 0;
+} */
+
+hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, hsla(217, 59%, 69%, .4), hsla(304, 43%, 64%, .4));
+  margin-block: 3rem;
+}

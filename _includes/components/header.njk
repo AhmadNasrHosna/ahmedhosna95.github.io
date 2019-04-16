@@ -1,11 +1,12 @@
 <header class="site-header">
+  <div class="site-header__wrapper">
+    <div class="site-header__site-title">
+      <h1>
+        <a href="{{ '/' | url }}">{{ metadata.title }}</a>
+      </h1>
+      <span>Front End Web Developer</span>
+    </div>
 
-  <div class="site-header__site-title">
-    <h1>
-      <a href="{{ '/' | url }}">{{ metadata.title }}</a>
-    </h1>
-    <span>Front End Web Developer</span>
+    {% include "components/nav.njk" %}
   </div>
-
-  {% include "components/nav.njk" %}
 </header>

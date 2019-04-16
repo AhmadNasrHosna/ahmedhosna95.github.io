@@ -1,0 +1,8 @@
+code {
+  font-family: var(--font-3);
+  background: #fff linear-gradient(45deg,rgba(89, 171, 149, 0.18),rgba(129, 165, 223, 0.18),rgba(203, 124, 196, 0.18));
+  border-radius: 2px;
+  padding: .05em .3em .15em;
+  color: var(--color-4);
+}
+

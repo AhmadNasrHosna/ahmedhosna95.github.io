@@ -1,17 +1,43 @@
 {
-  "license": "MIT",
-  "devDependencies": {
-    "@11ty/eleventy": "^0.7.0",
-    "@11ty/eleventy-plugin-rss": "^1.0.5",
-    "luxon": "^1.10.0",
-    "markdown-it": "^8.4.1",
-    "markdown-it-anchor": "^4.0.0"
-  },
-  "dependencies": {
-    "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.1",
-    "clean-css": "^4.2.1",
-    "html-minifier": "^3.5.21",
-    "normalize.css": "^8.0.1",
-    "uglify-es": "^3.3.9"
-  }
+    "license": "MIT",
+    "devDependencies": {
+        "@11ty/eleventy": "^0.7.0",
+        "@11ty/eleventy-plugin-rss": "^1.0.5",
+        "luxon": "^1.10.0",
+        "markdown-it": "^8.4.1",
+        "markdown-it-anchor": "^4.0.0",
+        "autoprefixer": "^9.4.5",
+        "cssnano": "^4.1.8",
+        "gulp": "^4.0.0",
+        "gulp-modernizr": "^3.2.1",
+        "gulp-next": "^1.0.9",
+        "gulp-postcss": "^8.0.0",
+        "gulp-sourcemaps": "^2.6.4",
+        "gulp-uglify": "^3.0.1",
+        "jquery": "^3.3.1",
+        "jquery-smooth-scroll": "^2.2.0",
+        "jquery-waypoints": "^2.0.5",
+        "lazysizes": "^4.1.5",
+        "modernizr": "^3.7.1",
+        "normalize.css": "^8.0.1",
+        "picturefill": "^3.0.3",
+        "postcss-conditionals": "^2.1.0",
+        "postcss-custom-properties": "^8.0.9",
+        "postcss-each": "^0.10.0",
+        "postcss-functions": "^3.0.0",
+        "postcss-import": "^12.0.1",
+        "postcss-mixins": "^6.2.1",
+        "postcss-nested": "^4.1.1",
+        "postcss-preset-env": "^6.5.0",
+        "postcss-responsive-type": "^1.0.0",
+        "postcss-simple-vars": "^5.0.1",
+        "waypoints": "^4.0.1"
+    },
+    "dependencies": {
+        "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.1",
+        "clean-css": "^4.2.1",
+        "html-minifier": "^3.5.21",
+        "normalize.css": "^8.0.1",
+        "uglify-es": "^3.3.9"
+    }
 }

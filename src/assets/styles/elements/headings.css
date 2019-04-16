@@ -1,0 +1,30 @@
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
+
+
+h2 {
+  &.headline-t-2 {
+    font-family: "Crimson Text";
+    font-weight: 100;
+    @mixin font-size 3.8;
+    @mixin at Small { @mixin font-size 5 }
+    line-height: 1.05;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+}
+
+h4 {
+  &.headline-t-4 {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    margin-bottom: .9rem;
+    font-family: adam\.cg_proregular,sans-serif;
+    font-weight: 400;
+    color: hsla(0, 0%, 75%, 1);
+  }
+}
+

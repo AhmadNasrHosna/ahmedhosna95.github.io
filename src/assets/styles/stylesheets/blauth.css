@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Blauth Light DEMO';
+    src: url('../../assets/fonts/blauth/Blauth-LightDEMO.eot');
+    src: url('../../assets/fonts/blauth/Blauth-LightDEMO.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/fonts/blauth/Blauth-LightDEMO.woff2') format('woff2'),
+        url('../../assets/fonts/blauth/Blauth-LightDEMO.woff') format('woff'),
+        url('../../assets/fonts/blauth/Blauth-LightDEMO.ttf') format('truetype'),
+        url('../../assets/fonts/blauth/Blauth-LightDEMO.svg#Blauth-LightDEMO') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Blauth SemiBold DEMO';
+    src: url('../../assets/fonts/blauth/Blauth-SemiBoldDEMO.eot');
+    src: url('../../assets/fonts/blauth/Blauth-SemiBoldDEMO.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/fonts/blauth/Blauth-SemiBoldDEMO.woff2') format('woff2'),
+        url('../../assets/fonts/blauth/Blauth-SemiBoldDEMO.woff') format('woff'),
+        url('../../assets/fonts/blauth/Blauth-SemiBoldDEMO.ttf') format('truetype'),
+        url('../../assets/fonts/blauth/Blauth-SemiBoldDEMO.svg#Blauth-SemiBoldDEMO') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+

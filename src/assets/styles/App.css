@@ -1,0 +1,66 @@
+﻿@import 'normalize.css';
+
+/* Settings – used with preprocessors and contain font, colors definitions, etc. */
+@import 'settings/fonts';
+@import 'settings/colors';
+
+/* Tools – globally used mixins and functions. It’s important not to output any CSS in the first 2 layers. */
+
+/* Functions */
+
+/* Mixins */
+@import 'tools/media-mixins';
+@import 'tools/center-mixins';
+@import 'tools/rem-fallback';
+@import 'tools/clearfix-mixins';
+@import 'tools/button-reset';
+
+/* Generic – reset and/or normalize styles, box-sizing definition, etc. This is the first layer which generates actual CSS. */
+@import 'generic/box-model';
+@import 'generic/scroll-behavior';
+@import 'generic/generic-hover';
+
+/* Elements – styling for bare HTML elements (like H1, A, etc.). These come with default styling from the browser so we can redefine them here. */
+@import 'elements/anchor';
+@import 'elements/media-elements';
+@import 'elements/body';
+@import 'elements/html';
+@import 'elements/figure';
+@import 'elements/paragraph';
+@import 'elements/blockquote';
+@import 'elements/headings';
+@import 'elements/forms';
+@import 'elements/button';
+@import 'elements/hr';
+@import 'elements/code';
+@import 'elements/ul-ol-li';
+
+/* Objects – class-based selectors which define undecorated design patterns, for example media object known from OOCSS */
+@import 'objects/grid';
+@import 'objects/button';
+@import 'objects/aspect-ratio';
+
+/* Components – specific UI components. This is where majority of our work takes place and our UI components are often composed of Objects and Components */
+@import 'components/site-header';
+@import 'components/tags';
+
+@import 'components/st';
+
+@import 'components/site-footer';
+
+
+
+/* Utilities – utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class */
+@import 'utilities/floats';
+@import 'utilities/lists';
+@import 'utilities/relative-height';
+@import 'utilities/full-background';
+@import 'utilities/text-align';
+@import 'utilities/font-weight';
+@import 'utilities/font-style';
+@import 'utilities/screen-reader';
+@import 'utilities/text-transform';
+@import 'utilities/display';
+@import 'utilities/margin';
+@import 'utilities/vertical-center';
+@import 'utilities/hidden';

@@ -1,0 +1,19 @@
+@define-mixin font-size $value: 1.6 {
+  font-size: calc($(value) * 10px);
+  font-size: $(value)rem;
+}
+
+@define-mixin line-height $value {
+  line-height: calc($(value) * 10px);
+  line-height: $(value)rem;
+}
+
+@define-mixin letter-spacing $value {
+  letter-spacing: calc($(value) * 10px);
+  letter-spacing: $(value)rem;
+}
+
+@define-mixin max-width $value {
+  max-width: calc($(value) * 10px);
+  max-width: $(value)rem;
+}

@@ -1,0 +1,7 @@
+@define-mixin button-reset {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}

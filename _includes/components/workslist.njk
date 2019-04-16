@@ -1,0 +1,42 @@
+<div class="articles" style="counter-reset: start-from {{ workslist.length + 1 }}">
+  
+  {% for work in workslist | reverse %}
+    <article class="entry" {% if work.url == url %} data-current="current item" {% endif %}>
+      
+      <h3 class="entry__title">
+        <a href="{{ work.url | url }}">
+          <span>
+          {% if work.data.title %}
+            {{ work.data.title }}
+          {% else %}
+						Untitled
+					{% endif %}
+          </span>
+        </a>
+      </h3>
+
+      <div class="entry__meta">
+      
+        <time class="entry__date" datetime="{{ work.date | machineDate }}">
+          <small>{{ work.date | readableDate }}</small>
+        </time>
+
+        {% if work.data.tags %}
+        <div class="entry__tags">
+          {% for tag in work.data.tags %}
+            {%- if tag != "work" -%}
+              {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+              <a href="{{ tagUrl | url }}" rel="tag">
+                <span>#{{ tag }}</span>
+              </a>
+            {%- endif -%}
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      </div>
+      
+    </article>
+  {% endfor %}
+
+</div>

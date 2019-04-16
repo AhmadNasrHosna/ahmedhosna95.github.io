@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Cocogoose';
+    src: url('../../assets/fonts/coco/CocogooseClassicTrial-Medium.eot');
+    src: url('../../assets/fonts/coco/CocogooseClassicTrial-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/fonts/coco/CocogooseClassicTrial-Medium.woff2') format('woff2'),
+        url('../../assets/fonts/coco/CocogooseClassicTrial-Medium.woff') format('woff'),
+        url('../../assets/fonts/coco/CocogooseClassicTrial-Medium.ttf') format('truetype'),
+        url('../../assets/fonts/coco/CocogooseClassicTrial-Medium.svg#CocogooseClassicTrial-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cocogoose Bold';
+    src: url('../../assets/fonts/coco/CocogooseClassicTrial-ExtraBold.eot');
+    src: url('../../assets/fonts/coco/CocogooseClassicTrial-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/fonts/coco/CocogooseClassicTrial-ExtraBold.woff2') format('woff2'),
+        url('../../assets/fonts/coco/CocogooseClassicTrial-ExtraBold.woff') format('woff'),
+        url('../../assets/fonts/coco/CocogooseClassicTrial-ExtraBold.ttf') format('truetype'),
+        url('../../assets/fonts/coco/CocogooseClassicTrial-ExtraBold.svg#CocogooseClassicTrial-ExtraBold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+

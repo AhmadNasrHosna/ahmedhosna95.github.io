@@ -1,0 +1,17 @@
+/* Fonts */
+/*  @import '../stylesheets/adamcgpro';
+ */
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black|Archivo+Narrow:400,400i,500,500i,600,600i,700,700i|Archivo:400,400i,500,500i,600,600i,700,700i|Barlow+Semi+Condensed:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Dosis:200,300,400,500,600,700,800|Heebo:100,300,400,500,700,800,900|Overpass:100,100i,200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i|Padauk:400,700|Palanquin+Dark:400,500,600,700|Rubik:300,300i,400,400i,500,500i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i');
+
+:root {
+  --font-1: 'Inter', sans-serif;
+  --font-2: 'Dosis', sans-serif;
+  --font-3: 'Inconsolata', sans-serif;
+  --font-4: '~', sans-serif;
+  --font-5: '~~', sans-serif;
+
+  @supports (font-variation-settings: normal) {
+    --font-1: "Inter var", system-ui, sans-serif;
+  }
+}

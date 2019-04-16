@@ -1,0 +1,17 @@
+input,
+textarea,
+select {
+  color: inherit; 
+  font: inherit; 
+  letter-spacing: inherit; 
+}
+
+input,
+textarea, {
+  border: 1px solid gray; 
+}
+
+
+input[type=submit] {
+  cursor: pointer;
+}

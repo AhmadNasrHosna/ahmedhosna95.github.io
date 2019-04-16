@@ -7,20 +7,30 @@ tags:
   - politics
 ---
 
-{% Youtube "Uwnmn65cMec" %}
-
 Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. 
 
-![اسم الصورة](https://a3ammar.github.io/arabic-jekyll/images/jekyll-logo.png "وصف الصورة")
+1. Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.
+2. Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking.
+3. Leverage agile frameworks to provide a robust.
 
+{% Quote {
+  text: 'Quote text',
+  cite: 'Max Böck, [On Simplicity](https://mxb.dev/blog/on-simplicity/)'
+} %}
 
-1. Leverage agile frameworks
-2. Provide a robust synopsis
-3. Collaborative thinking
+Leverage agile [frameworks](#) to provide a robust synopsis for high level overviews. **Iterative** approaches to corporate strategy foster collaborative thinking to further the overall value proposition.Leverage agile frameworks to provide a robust synopsis for high level overviews.
+
+{% Figure {
+  src: '/static/img/immgg.jpg',
+  alt: 'Alt text',
+  caption: 'Caption text'
+} %}
 
 ## 3 Important things about CSS
 
 Leverage agile [frameworks](#) to provide a robust synopsis for high level overviews. **Iterative** approaches to corporate strategy foster collaborative thinking to further the overall value proposition.Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to _corporate_ strategy foster collaborative thinking to further the overall value proposition. Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. 
+
+{% Youtube "GV9yHrQ293U" %}
 
 ***
 

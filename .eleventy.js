@@ -1,12 +1,15 @@
-const { DateTime } = require("luxon");
-const CleanCSS = require("clean-css");
-const UglifyJS = require("uglify-es");
-const htmlmin = require("html-minifier");
-const pluginRss = require("@11ty/eleventy-plugin-rss");
+const { DateTime }    = require("luxon");
+const CleanCSS        = require("clean-css");
+const UglifyJS        = require("uglify-es");
+const htmlmin         = require("html-minifier");
+const pluginRss       = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const Figure = require("./_includes/components/Figure.js");
-const Youtube = require("./_includes/components/Youtube.js");
-const markdown = require('markdown-it')({
+const Figure          = require("./_includes/components/Figure.js");
+const Youtube         = require("./_includes/components/Youtube.js");
+const Quote           = require('./_includes/components/Quote.js');
+const Link            = require('./_includes/components/Link.js');
+const Note            = require('./_includes/components/Note.js');
+const markdown        = require('markdown-it')({
   html: true,
   breaks: true,
   linkify: true,
@@ -26,6 +29,7 @@ module.exports = function(eleventyConfig) {
   )
 
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
+  eleventyConfig.addLayoutAlias("work", "layouts/work.njk");
 
   // Date formatting (human readable)
   eleventyConfig.addFilter("readableDate", dateObj => {
@@ -72,7 +76,6 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPlugin(syntaxHighlight);
 
-  eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
 
   // Get the first `n` elements of a collection.
   eleventyConfig.addFilter("head", (array, n) => {
@@ -86,11 +89,20 @@ module.exports = function(eleventyConfig) {
   // Shortcodes
   eleventyConfig.addShortcode("Figure", Figure);
   eleventyConfig.addShortcode("Youtube", Youtube);
+  eleventyConfig.addShortcode('Quote', Quote);
+  eleventyConfig.addShortcode('Link', Link);
+  eleventyConfig.addShortcode('Note', Note);
 
   // only content in the `posts/` directory
   eleventyConfig.addCollection("posts", function(collection) {
     return collection.getAllSorted().filter(function(item) {
       return item.inputPath.match(/^\.\/posts\//) !== null;
+    });
+  });
+
+  eleventyConfig.addCollection("works", function(collection) {
+    return collection.getAllSorted().filter(function(item) {
+      return item.inputPath.match(/^\.\/works\//) !== null;
     });
   });
 

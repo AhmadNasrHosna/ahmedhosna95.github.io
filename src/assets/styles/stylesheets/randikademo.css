@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Radnika';
+    src: url('../../assets/fonts/randika/Radnika-Medium.eot');
+    src: url('../../assets/fonts/randika/Radnika-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/fonts/randika/Radnika-Medium.woff2') format('woff2'),
+        url('../../assets/fonts/randika/Radnika-Medium.woff') format('woff'),
+        url('../../assets/fonts/randika/Radnika-Medium.ttf') format('truetype'),
+        url('../../assets/fonts/randika/Radnika-Medium.svg#Radnika-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
