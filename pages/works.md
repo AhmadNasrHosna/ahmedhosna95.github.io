@@ -1,6 +1,6 @@
 ---
-layout: layouts/projects.njk
-title: Works | Ahmed N. Hosna
+layout: layouts/portfolio.njk
+title: Portfolio | Ahmed N. Hosna
 tags:
   - nav
 navtitle: Portfolio

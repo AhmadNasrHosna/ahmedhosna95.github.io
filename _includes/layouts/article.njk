@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-section: work
+section: article
 ---
 
 <article class="article">
@@ -11,7 +11,7 @@ section: work
       {% if tags %}
         <div class="article__tags">
           {% for tag in tags %}
-            {%- if tag != "works" -%}
+            {%- if tag != "article" -%}
               {% set tagUrl %}/tags/{{ tag }}/{% endset %}
               <a href="{{ tagUrl | url }}" rel="tag">#{{ tag }}</a>
             {%- endif -%}
@@ -27,17 +27,6 @@ section: work
 
   <section class="article__content">
     {{ layoutContent | safe }}
-
-
-    {% if photoCredits %}
-    <hr />
-    <h4>Photo credits</h4>
-    <blockquote>
-    {% for item in photoCredits %}
-      <p><em>{{ item.name }} - <a href="{{ item.url }}" target="NEW" rel="noopener">{{ item.url }}</em></p>
-    {% endfor %}
-    </blockquote>
-    {% endif %}
   </section>
 
   <footer class="article__footer">
@@ -54,5 +43,5 @@ section: work
 </article>
 
 <nav class="secondary-navbar">
-  <a href="{{ '/works/' | url }}"><span>←</span> Back to portfolio</a>
+  <a href="{{ '/articles/' | url }}"><span>←</span> Blog index</a>
 </nav>

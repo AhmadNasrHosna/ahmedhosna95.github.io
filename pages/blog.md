@@ -5,5 +5,5 @@ tags:
   - nav
 navtitle: Articles
 date: 2017-01-01
-permalink: /posts/index.html
+permalink: /articles/index.html
 ---

@@ -21,9 +21,9 @@
   <script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
   <script>
 
-    const postTitle = document.querySelector('.post__title');
-    const postTitleText = document.querySelector('.post__title span');
-    const postAuthor = document.querySelector('.post__footer .post-author');
+    const articleTitle = document.querySelector('.article__title');
+    const articleTitleText = document.querySelector('.article__title span');
+    const articleAuthor = document.querySelector('.article__footer .post-author');
 
     const range = 100;
 
@@ -31,26 +31,34 @@
       const currentScroll = pageYOffset;
       const backgroundMove = Math.round( ((currentScroll / 3) / (range * 11)) * 100  );
 
-      if (postTitle && postTitleText && postAuthor) {
-        const CompletelyFadePoint = postTitleText.getBoundingClientRect().top + pageYOffset + 40;
+      if (articleTitle && articleTitleText && articleAuthor) {
+        const CompletelyFadePoint = articleTitleText.getBoundingClientRect().top + pageYOffset + 40;
         const opacityValue  = 1 - (currentScroll - CompletelyFadePoint + range) / range;
 
-        postTitleText.style.opacity = opacityValue;
-        postTitleText.style.transform = `translateY(${currentScroll / 3}px)` ;
-        postTitleText.style.transform = `translateY(${currentScroll / 3}px)` ;
+        articleTitleText.style.opacity = opacityValue;
+        articleTitleText.style.transform = `translateY(${currentScroll / 3}px)` ;
+        articleTitleText.style.transform = `translateY(${currentScroll / 3}px)` ;
 
         if (opacityValue > '1') {
-          postTitleText.style.opacity = 1;
+          articleTitleText.style.opacity = 1;
         } else if ( opacityValue < '0' ) {
-          postTitleText.style.opacity = 0;
+          articleTitleText.style.opacity = 0;
         } 
 
-        postTitle.style.backgroundPosition = `0 -${backgroundMove}%` ;
-        postAuthor.style.backgroundPosition = `0 -${backgroundMove}%` ;
+        articleTitle.style.backgroundPosition = `0 -${backgroundMove}%` ;
+        articleAuthor.style.backgroundPosition = `0 -${backgroundMove}%` ;
       } 
     });
 
   </script>
+
+  <noscript>
+    <style>
+      [data-simplebar] { overflow: auto }
+      .projects__body { padding-right: 0 !important }
+    </style>
+  </noscript>
+
   </body>
 
 </html>

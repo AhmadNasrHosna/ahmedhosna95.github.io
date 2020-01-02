@@ -94,9 +94,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addShortcode('Note', Note);
 
   // only content in the `posts/` directory
-  eleventyConfig.addCollection("posts", function(collection) {
+  eleventyConfig.addCollection("articles", function(collection) {
     return collection.getAllSorted().filter(function(item) {
-      return item.inputPath.match(/^\.\/posts\//) !== null;
+      return item.inputPath.match(/^\.\/articles\//) !== null;
     });
   });
 

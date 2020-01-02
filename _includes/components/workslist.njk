@@ -1,42 +1,172 @@
-<div class="articles" style="counter-reset: start-from {{ workslist.length + 1 }}">
-  
-  {% for work in workslist | reverse %}
-    <article class="entry" {% if work.url == url %} data-current="current item" {% endif %}>
-      
-      <h3 class="entry__title">
-        <a href="{{ work.url | url }}">
-          <span>
-          {% if work.data.title %}
-            {{ work.data.title }}
-          {% else %}
-						Untitled
-					{% endif %}
-          </span>
-        </a>
-      </h3>
+<div class="projects-wrapper">
+  <div class="projects projects--sandbox" style="counter-reset: start-from {{ workslist.length + 1 }}">
+    
+        <header class="projects__header">
+          <h2>
+            <span class="projects__header__title">daily practice</span>
+            <span class="projects__header__subtitle">
+              since 
+              <strong id="daysCount">15</strong>
+              days
+            </span>
+          </h2>
+        </header>
+        <ul data-simplebar data-simplebar-auto-hide="false" class="projects__body list list--no-bullets" {% if work.url == url %} data-current="current item" {% endif %}>
+          
+          {% for work in workslist | reverse %}
+            {% if work.data.category == "sb" %}
 
-      <div class="entry__meta">
-      
-        <time class="entry__date" datetime="{{ work.date | machineDate }}">
-          <small>{{ work.date | readableDate }}</small>
-        </time>
+              <li class="project">
+                <div class="project__thumb"> 
+                  <a href="{{ work.url | url }}" data-label="HTML5/CSS3/JS">
+                    <img src="{{ work.data.thumb }}" alt="{{ work.data.title }}" title="{{ work.data.title }}">
+                  </a>
+                </div>
 
-        {% if work.data.tags %}
-        <div class="entry__tags">
-          {% for tag in work.data.tags %}
-            {%- if tag != "work" -%}
-              {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-              <a href="{{ tagUrl | url }}" rel="tag">
-                <span>#{{ tag }}</span>
-              </a>
-            {%- endif -%}
+                <div class="project__overview"> 
+                  <h3 class="project__title">
+                    <a href="{{ work.url | url }}">
+                      <span>
+                      {% if work.data.title %}
+                        {{ work.data.title }}
+                      {% else %}
+                        Untitled project
+                      {% endif %}
+                      </span>
+                    </a>
+                  </h3>
+
+                  <p class="project__summary">{{ work.data.summary }}</p>
+                  
+                  <div class="project__links">
+                    <a href="{{ work.data.preview }}">Live Preview</a>
+                    <a href="{{ work.data.github }}">Github</a>
+                  </div>
+                </div>
+              </li>
+
+            {% endif %}   
           {% endfor %}
-        </div>
-      {% endif %}
+        </ul>
+        <footer class="projects__footer">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 92 92">
+              <path d="M62 53c-4 0-7 4-7 9s3 9 7 9c3 0 6-4 6-9s-3-9-6-9zm23-24c0-2 0-12-4-22 0 0-9 1-22 10l-13-1-13 1C20 8 11 7 11 7 7 17 7 27 7 29c-4 5-7 11-7 19 0 36 30 37 37 37a7984 7984 0 0 1 18 0c7 0 37-1 37-37 0-8-3-14-7-19zM46 81c-19 0-34-3-34-21 0-4 2-8 6-12 6-5 16-3 28-3s22-2 28 3c4 4 6 8 6 12 0 18-15 21-34 21zM30 53c-3 0-6 4-6 9s3 9 6 9c4 0 7-4 7-9s-3-9-7-9z"/>
+            </svg>
+            <span>browsing all in github</span>
+          </a>
+        </footer>
+  </div>
+  
+  <div class="projects projects--javascript" style="counter-reset: start-from {{ workslist.length + 1 }}">
+    
+        <header class="projects__header">
+          <h2>
+            <span class="projects__header__title">javascript projects</span>
+            <span class="projects__header__subtitle">these were hard times ◕‸◕</span>
+          </h2>
+        </header>
+        <ul data-simplebar data-simplebar-auto-hide="false" class="projects__body list list--no-bullets" {% if work.url == url %} data-current="current item" {% endif %}>
+          
+          {% for work in workslist | reverse %}
+            {% if work.data.category == "js" %}
 
-      </div>
-      
-    </article>
-  {% endfor %}
+              <li class="project">
+                <div class="project__thumb"> 
+                  <a href="{{ work.url | url }}" data-label="HTML5/CSS3/JS">
+                    <img src="{{ work.data.thumb }}" alt="{{ work.data.title }}" title="{{ work.data.title }}">
+                  </a>
+                </div>
 
+                <div class="project__overview"> 
+                  <h3 class="project__title">
+                    <a href="{{ work.url | url }}">
+                      <span>
+                      {% if work.data.title %}
+                        {{ work.data.title }}
+                      {% else %}
+                        Untitled project
+                      {% endif %}
+                      </span>
+                    </a>
+                  </h3>
+
+                  <p class="project__summary">{{ work.data.summary }}</p>
+                  
+                  <div class="project__links">
+                    <a href="{{ work.data.preview }}">Live Preview</a>
+                    <a href="{{ work.data.github }}">Github</a>
+                  </div>
+                </div>
+              </li>
+
+            {% endif %}   
+          {% endfor %}
+        </ul>
+        <footer class="projects__footer">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 92 92">
+              <path d="M62 53c-4 0-7 4-7 9s3 9 7 9c3 0 6-4 6-9s-3-9-6-9zm23-24c0-2 0-12-4-22 0 0-9 1-22 10l-13-1-13 1C20 8 11 7 11 7 7 17 7 27 7 29c-4 5-7 11-7 19 0 36 30 37 37 37a7984 7984 0 0 1 18 0c7 0 37-1 37-37 0-8-3-14-7-19zM46 81c-19 0-34-3-34-21 0-4 2-8 6-12 6-5 16-3 28-3s22-2 28 3c4 4 6 8 6 12 0 18-15 21-34 21zM30 53c-3 0-6 4-6 9s3 9 6 9c4 0 7-4 7-9s-3-9-7-9z"/>
+            </svg>
+            <span>browsing all in github</span>
+          </a>
+        </footer>
+  </div>
+  
+  <div class="projects projects--recent" style="counter-reset: start-from {{ workslist.length + 1 }}">
+    
+        <header class="projects__header">
+          <h2>
+            <span class="projects__header__title">recent projects</span>
+            <span class="projects__header__subtitle">selected ones</span>
+          </h2>
+        </header>
+        <ul data-simplebar data-simplebar-auto-hide="false" class="projects__body list list--no-bullets" {% if work.url == url %} data-current="current item" {% endif %}>
+          
+          {% for work in workslist | reverse %}
+            {% if work.data.category == "recent" %}
+
+              <li class="project">
+                <div class="project__thumb"> 
+                  <a href="{{ work.url | url }}" data-label="HTML5/CSS3/JS">
+                    <img src="{{ work.data.thumb }}" alt="{{ work.data.title }}" title="{{ work.data.title }}">
+                  </a>
+                </div>
+
+                <div class="project__overview"> 
+                  <h3 class="project__title">
+                    <a href="{{ work.url | url }}">
+                      <span>
+                      {% if work.data.title %}
+                        {{ work.data.title }}
+                      {% else %}
+                        Untitled project
+                      {% endif %}
+                      </span>
+                    </a>
+                  </h3>
+
+                  <p class="project__summary">{{ work.data.summary }}</p>
+                  
+                  <div class="project__links">
+                    <a href="{{ work.data.preview }}">Live Preview</a>
+                    <a href="{{ work.data.github }}">Github</a>
+                  </div>
+                </div>
+              </li>
+
+            {% endif %}   
+          {% endfor %}
+        </ul>
+        <footer class="projects__footer">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 92 92">
+              <path d="M62 53c-4 0-7 4-7 9s3 9 7 9c3 0 6-4 6-9s-3-9-6-9zm23-24c0-2 0-12-4-22 0 0-9 1-22 10l-13-1-13 1C20 8 11 7 11 7 7 17 7 27 7 29c-4 5-7 11-7 19 0 36 30 37 37 37a7984 7984 0 0 1 18 0c7 0 37-1 37-37 0-8-3-14-7-19zM46 81c-19 0-34-3-34-21 0-4 2-8 6-12 6-5 16-3 28-3s22-2 28 3c4 4 6 8 6 12 0 18-15 21-34 21zM30 53c-3 0-6 4-6 9s3 9 6 9c4 0 7-4 7-9s-3-9-7-9z"/>
+            </svg>
+            <span>browsing all in github</span>
+          </a>
+        </footer>
+  </div>
 </div>
+
+

@@ -43,6 +43,7 @@ code[class*=language-], pre[class*=language-] {
   font-family: "Inconsolata", monospace;
   font-size: 18px;
   padding: 0;
+  letter-spacing: 0;
 }
 
 /* Code blocks */

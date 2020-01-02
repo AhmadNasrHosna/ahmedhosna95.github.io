@@ -6,17 +6,17 @@ pagination:
   filter:
     - all
     - nav
-    - post
-    - posts
+    - article
+    - articles
 permalink: /tags/{{ tag }}/
 layout: layouts/base.njk
 ---
 
 <h1>Tagged “{{ tag }}”</h1>
 
-{% set postslist = collections[ tag ] %}
-{% include "components/postslist.njk" %}
+{% set articleslist = collections[ tag ] %}
+{% include "components/articleslist.njk" %}
 
 <nav class="secondary-navbar">
-  <a href="{{ '/posts/' | url }}">← Blog index</a>
+  <a href="{{ '/articles/' | url }}">← Blog index</a>
 </nav>
