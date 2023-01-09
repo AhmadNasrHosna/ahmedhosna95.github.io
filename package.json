@@ -3,7 +3,7 @@
     "devDependencies": {
         "@11ty/eleventy": "^0.7.0",
         "@11ty/eleventy-plugin-rss": "^1.0.5",
-        "luxon": "^1.10.0",
+        "luxon": "^2.5.2",
         "markdown-it": "^8.4.1",
         "markdown-it-anchor": "^4.0.0",
         "autoprefixer": "^9.4.5",
